@@ -1,6 +1,6 @@
 # Game Stop
 
-Proyecto del curso **_React_**
+Proyecto del curso **_React_** de Coder House
 
 * Alumna: Valentina Borras
 
