@@ -7,11 +7,11 @@ const App = () => {
   const greeting = 'Buenas, bienvenid@ a Game Stop! *nombre totalmente original* ;)'
   
   return (
-    <body className=' bg-gradient-to-br from-slate-900 to-indigo-900 h-screen w-screen font-sanz'>
+    <div className=' bg-gradient-to-br from-slate-900 to-indigo-900 h-screen w-screen font-sanz'>
       <NavBar/>
       <ItemListContainer greeting={greeting} />
       
-    </body>   
+    </div>   
   )
 }
 
