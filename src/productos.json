@@ -1,0 +1,67 @@
+[
+    {"id":1,
+      "name":"The Last of Us", 
+      "category":"juego", 
+     "price": 13000,
+     "stock":10,
+     "image":"../../public/assets/TLOU.png",
+     "description":"Consectetur Lorem tempor laborum elit ut duis esse Lorem duis pariatur dolor eu occaecat. Minim anim laborum enim deserunt proident labore eiusmod adipisicing eu do elit mollit dolore nulla. Consequat excepteur fugiat ipsum non ea aute commodo."
+    },
+    {"id":2,
+      "name":"Hogwarts Legacy", 
+      "category":"juego", 
+      "price": 11000,
+      "stock":10,
+      "image":"../../public/assets/HHLL.png",
+      "description":"Dolore id occaecat do minim nostrud id laboris ipsum proident incididunt adipisicing. Duis aliqua amet laboris ea. Exercitation culpa officia non nisi occaecat irure consequat velit et eiusmod non et esse. Tempor deserunt esse mollit deserunt culpa. Veniam et consequat id voluptate id culpa commodo. "
+    
+    },
+    {"id":3,
+      "name": "PlayStation 5", 
+      "category":"consola", 
+      "price": 300000,
+      "stock":3,
+      "image":"../../public/assets/PS5.png",
+      "description":"Proident amet excepteur laborum laboris ex velit incididunt cillum fugiat. Irure labore quis duis aute ex Lorem aliqua sit sint. Id exercitation ut occaecat nulla Lorem occaecat labore est. Esse non in dolore ipsum sint do nostrud elit sint sunt laboris nostrud exercitation aliqua."
+    },
+    {"id":4,
+    "name": "Nintendo Switch", 
+    "category":"consola", 
+    "price": 200000,
+    "stock":5,
+    "image":"../../public/assets/NS.png",
+    "description":"Proident amet excepteur laborum laboris ex velit incididunt cillum fugiat. Irure labore quis duis aute ex Lorem aliqua sit sint. Id exercitation ut occaecat nulla Lorem occaecat labore est. Esse non in dolore ipsum sint do nostrud elit sint sunt laboris nostrud exercitation aliqua."
+    },
+    {"id":5,
+    "name": "Microprocesador Intel i9", 
+    "category":"componente", 
+    "price": 100000,
+    "stock":2,
+    "image":"../../public/assets/I9.png",
+    "description":"Proident amet excepteur laborum laboris ex velit incididunt cillum fugiat. Irure labore quis duis aute ex Lorem aliqua sit sint. Id exercitation ut occaecat nulla Lorem occaecat labore est. Esse non in dolore ipsum sint do nostrud elit sint sunt laboris nostrud exercitation aliqua."
+    },
+    {"id":6,
+    "name": "Placa de video Msi Rtx 3060", 
+    "category":"componente", 
+    "price": 200000,
+    "stock":2,
+    "image":"../../public/assets/RTX.png",
+    "description":"Proident amet excepteur laborum laboris ex velit incididunt cillum fugiat. Irure labore quis duis aute ex Lorem aliqua sit sint. Id exercitation ut occaecat nulla Lorem occaecat labore est. Esse non in dolore ipsum sint do nostrud elit sint sunt laboris nostrud exercitation aliqua."
+    },
+    {"id":7,
+    "name": "Teclado Razer Huntsman", 
+    "category":"periferico", 
+    "price": 60000,
+    "stock":5,
+    "image":"../../public/assets/RAZER.png",
+    "description":"Proident amet excepteur laborum laboris ex velit incididunt cillum fugiat. Irure labore quis duis aute ex Lorem aliqua sit sint. Id exercitation ut occaecat nulla Lorem occaecat labore est. Esse non in dolore ipsum sint do nostrud elit sint sunt laboris nostrud exercitation aliqua."
+    },
+    {"id":8,
+    "name": "Mouse Logitech G102 Hero", 
+    "category":"periferico", 
+    "price": 11000,
+    "stock":7,
+    "image":"../../public/assets/G502H.png",
+    "description":"Proident amet excepteur laborum laboris ex velit incididunt cillum fugiat. Irure labore quis duis aute ex Lorem aliqua sit sint. Id exercitation ut occaecat nulla Lorem occaecat labore est. Esse non in dolore ipsum sint do nostrud elit sint sunt laboris nostrud exercitation aliqua."
+    }
+]
