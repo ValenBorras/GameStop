@@ -2,8 +2,12 @@ import React from 'react'
 import Products from '../productos.json'
 import {ItemList} from '../components/ItemList'
 import { useState } from 'react'
+import { useParams } from 'react-router-dom'
+
 
 export const ItemListContainer = () => {
+
+  const {category} = useParams();
 
   const [products, setProducts] = useState([]);
 
@@ -23,21 +27,14 @@ export const ItemListContainer = () => {
       console.log(err)
     }
   }
-
   fetchData()
-  
+
+  console.log(products)
+
+  const prodFilter = products.filter((p)=> p.category === category)
   return (
     <>
-    <ItemList data={products}/>
-    {/* <ItemDetail             
-            id={3457}
-            name={'name'}
-            cat={'data.category'}
-            price={'data.price'}
-            desc={'data.description'}
-            stock={9} 
-    /> */}
+      {category ? <ItemList data={prodFilter}/> : <ItemList data={products}/>}
     </>
-    
   )
 }

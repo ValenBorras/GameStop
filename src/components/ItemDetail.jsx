@@ -1,25 +1,21 @@
 import React from 'react'
 import { ItemCount } from './ItemCount'
 
-export const ItemDetail = ({products}) => {
+export const ItemDetail = ({product}) => {
 
-  
-  const prodFilter = products.filter((product)=> product.id == 2)
   return (
     <>
-        {prodFilter.map((prod)=>(
           <article className='flex flex-col bg-slate-200 m-2 w-56 h-92 items-center text-slate-900 rounded-md'>
-          <h1 className='font-bold'>{prod.name}</h1>
+          <h1 className='font-bold'>{product.name}</h1>
           <picture className='m-2'>
             <img src='' alt="" />
           </picture>
-          <span className=' opacity-70' >{prod.cat}</span>
-          <span className=' opacity-70' >{prod.desc}</span>
+          <span className=' opacity-70' >{product.cat}</span>
+          <span className=' opacity-70' >{product.desc}</span>
 
-          <span>${prod.price}</span>
-          <ItemCount stock={prod.stock}/>
+          <span>${product.price}</span>
+          <ItemCount stock={product.stock}/>
           </article>
-        ))}
     </>
 
   )

@@ -1,10 +1,14 @@
 import React from 'react'
+import Products from '../productos.json'
 import { ItemDetail } from '../components/ItemDetail';
 import { useState } from 'react'
-import Products from '../productos.json'
+import { useParams } from 'react-router';
 
 
 export const ItemDetailContainer = () => {
+
+  const {productId} = useParams()
+
   const [products, setProducts] = useState([]);
 
   const mostrarProds =()=>{
@@ -27,9 +31,11 @@ export const ItemDetailContainer = () => {
 
   console.log(products)
 
+  const prodFilter = products.filter((p)=> p.id === productId)
+
   return (
     <>
-    <ItemDetail products={products}/>
+    <ItemDetail products={prodFilter}/>
     </>
      
   )

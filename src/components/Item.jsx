@@ -14,7 +14,7 @@ export const Item = ({name,cat,price, image, id}) => {
       <span className=' opacity-70' >{cat}</span>
       <span>${price}</span>
       <section>
-        <Link to='/detail/{id}'>
+        <Link to={`/detail/${id}`}>
           <button  className='bg-indigo-900  text-slate-200 p-2 m-1 font-bold mt-2 rounded-lg'>Detalles</button>
         </Link>
       </section>
