@@ -5,7 +5,7 @@ export const ItemList = ({data}) => {
   return (
     <>
 
-    <section className=' flex flex-wrap mx-10 justify-center w'>
+    <section className=' flex flex-wrap justify-center w'>
       {data?.map((data)=>(
         <Item 
           key={data.id}

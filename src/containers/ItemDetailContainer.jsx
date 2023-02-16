@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Products from '../productos.json'
 import { ItemDetail } from '../components/ItemDetail';
 import { useState } from 'react'
@@ -7,9 +7,9 @@ import { useParams } from 'react-router';
 
 export const ItemDetailContainer = () => {
 
-  const {productId} = useParams()
+  const {id} = useParams()
 
-  const [products, setProducts] = useState([]);
+  const [product, setProduct] = useState([]);
 
   const mostrarProds =()=>{
     return new Promise((resolve, reject)=>{
@@ -22,21 +22,18 @@ export const ItemDetailContainer = () => {
   async function fetchData(){
     try{
       const data = await mostrarProds();
-      setProducts(data)
+      setProduct(data.find((item)=> item.id === parseInt(id)))
     } catch (err){
       console.log(err)
     }
   }
-  fetchData()
-
-  console.log(products)
-
-  const prodFilter = products.filter((p)=> p.id === productId)
+  useEffect(()=>{
+    fetchData()
+  },[id])
 
   return (
     <>
-    <ItemDetail products={prodFilter}/>
-    </>
-     
+    <ItemDetail product={product}/>
+    </> 
   )
 }

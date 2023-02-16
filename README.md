@@ -14,6 +14,6 @@ Extensiones de vs recomendadas para facilitar la correccion:
 * _inline fold_ (esconde las clases de *tailwind* y se lee mas facil el codigo)
 
 ---
->pd: Los estilos no estan terminados
+GIF que muestra la aplicacion de rutas --> [gif](/public/Game%20Stop%20-%20Valentina%20Borras%20-%20Google%20Chrome%202023-02-16%2019-45-35.mp4)
 
 ----

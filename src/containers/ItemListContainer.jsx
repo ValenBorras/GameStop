@@ -1,8 +1,8 @@
 import React from 'react'
 import Products from '../productos.json'
 import {ItemList} from '../components/ItemList'
-import { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Link, useParams } from 'react-router-dom'
 
 
 export const ItemListContainer = () => {
@@ -27,9 +27,11 @@ export const ItemListContainer = () => {
       console.log(err)
     }
   }
-  fetchData()
+  
+  useEffect(()=>{
+    fetchData()
+  },[category])
 
-  console.log(products)
 
   const prodFilter = products.filter((p)=> p.category === category)
   return (
