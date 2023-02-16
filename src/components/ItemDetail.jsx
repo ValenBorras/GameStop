@@ -2,6 +2,8 @@ import React from 'react'
 import { ItemCount } from './ItemCount'
 
 export const ItemDetail = ({products}) => {
+
+  
   const prodFilter = products.filter((product)=> product.id == 2)
   return (
     <>

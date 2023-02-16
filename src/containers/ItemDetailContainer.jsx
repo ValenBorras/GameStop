@@ -11,7 +11,7 @@ export const ItemDetailContainer = () => {
     return new Promise((resolve, reject)=>{
        Products.length <= 1 ? 
        reject('No hay productos')
-       : setTimeout(() => {resolve(Products)},1000) 
+       : setTimeout(() => {resolve(Products)},1) 
     });
   }
 

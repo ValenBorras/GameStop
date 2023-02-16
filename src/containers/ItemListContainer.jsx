@@ -2,9 +2,8 @@ import React from 'react'
 import Products from '../productos.json'
 import {ItemList} from '../components/ItemList'
 import { useState } from 'react'
-import { ItemDetailContainer } from './ItemDetailContainer'
 
-export const ItemListContainer = ({greeting}) => {
+export const ItemListContainer = () => {
 
   const [products, setProducts] = useState([]);
 
@@ -12,7 +11,7 @@ export const ItemListContainer = ({greeting}) => {
     return new Promise((resolve, reject)=>{
        Products.length <= 1 ? 
        reject('No hay productos')
-       : setTimeout(() => {resolve(Products)},1000) 
+       : setTimeout(() => {resolve(Products)},1) 
     });
   }
 
