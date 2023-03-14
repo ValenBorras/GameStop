@@ -8,6 +8,8 @@ Proyecto del curso **_React_** de Coder House
 
 Es una tienda e-commerce de videojuegos, consolas, y mas productos gaming. Use tailwind, y react.js para la elaboracion de la misma. 
 
+Fue realizado con Vite y se corre con el comando:  **npm run dev**
+
 
 ### Extensiones de vs recomendadas para facilitar la correccion:
 
