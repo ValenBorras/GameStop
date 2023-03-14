@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
-import Products from '../productos.json'
+import React, { useEffect } from 'react';
 import { ItemDetail } from '../components/ItemDetail';
-import { useState } from 'react'
+import { useState } from 'react';
 import { useParams } from 'react-router';
+import {doc, getDoc, getFirestore} from "firebase/firestore";
 
 
 export const ItemDetailContainer = () => {
@@ -11,25 +11,16 @@ export const ItemDetailContainer = () => {
 
   const [product, setProduct] = useState([]);
 
-  const mostrarProds =()=>{
-    return new Promise((resolve, reject)=>{
-       Products.length <= 1 ? 
-       reject('No hay productos')
-       : setTimeout(() => {resolve(Products)},1) 
-    });
-  }
-
-  async function fetchData(){
-    try{
-      const data = await mostrarProds();
-      setProduct(data.find((item)=> item.id === parseInt(id)))
-    } catch (err){
-      console.log(err)
-    }
-  }
   useEffect(()=>{
-    fetchData()
-  },[id])
+    const db = getFirestore();
+    const item = doc(db, 'Productos', `${id}` );
+    getDoc(item).then((prod)=>{
+      if(prod.exists()){
+        const doc = prod.data();
+        setProduct(doc);
+      }
+    })
+  },[])
 
   return (
     <>

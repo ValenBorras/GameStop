@@ -24,6 +24,10 @@ export const NavBar = () => {
         <NavLink to={`/list/${"periferico"}`} className='basis-1/4 text-slate-200 font-semibold text-base hover:text-indigo-300 mx-2 py-2 transition-all text-center'>
           Perifericos
         </NavLink>
+        <span className='basis-1/4 text-slate-200 font-semibold text-base hover:text-indigo-300 mx-2 py-2 transition-all text-center'>|</span>
+        <NavLink to={'/'} className='basis-1/4 text-slate-200 font-semibold text-base hover:text-indigo-300 mx-2 py-2 transition-all text-center'>
+          Todos
+        </NavLink>
 
       </ul>
     <CartWidget/>

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import picture from '../assets/HHLL.png'
 
 export const Item = ({name,cat,price, image, id}) => {
 
@@ -13,7 +12,7 @@ export const Item = ({name,cat,price, image, id}) => {
         </picture>
       <span className=' opacity-70' >{cat}</span>
       <span>${price}</span>
-      <section>
+      <section >
         <Link to={`/detail/${id}`}>
           <button className='bg-indigo-900  text-white p-2 m-1 font-bold mt-2 rounded-lg'>Detalles</button>
         </Link>

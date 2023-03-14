@@ -1,11 +1,10 @@
-import React from 'react'
+import React, { memo } from 'react'
 import {Item} from './Item'
 
-export const ItemList = ({data}) => {
+export const ItemList = memo(function ItemList({data}){
   return (
     <>
-
-    <section className=' flex flex-wrap justify-center w'>
+    <section className=' flex flex-wrap justify-center w-3/4'>
       {data?.map((data)=>(
         <Item 
           key={data.id}
@@ -21,5 +20,5 @@ export const ItemList = ({data}) => {
     </section>
     </>
   )
-}
+})
 

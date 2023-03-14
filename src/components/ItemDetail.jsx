@@ -1,9 +1,10 @@
 import React from 'react'
 import { ItemCount } from './ItemCount'
-import { FaArrowLeft } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 export const ItemDetail = ({product}) => {
+  const {id} = useParams()
 
   return (
     <>
@@ -18,11 +19,13 @@ export const ItemDetail = ({product}) => {
         <span className=' opacity-80 mx-3' >{product.description}</span>
 
         <span className='font-medium'>${product.price}</span>
-        <ItemCount stock={product.stock}/>
-        
-        <Link to='/cart'>
-          <button className='bg-indigo-900 text-slate-200 p-2 font-medium my-1 rounded-lg'> Añadir al carrito </button>
-        </Link>
+        <ItemCount 
+        stock={product.stock} 
+        id={id}
+        price={product.price}
+        name={product.name}
+        image={product.image}
+        />
         <Link to='/list'>
           <button className='text-indigo-900 my-2 font-medium'> Volver al listado </button>
         </Link>

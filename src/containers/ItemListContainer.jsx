@@ -1,8 +1,8 @@
 import React from 'react'
-import Products from '../productos.json'
 import {ItemList} from '../components/ItemList'
 import { useState, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+import {collection, getDocs, getFirestore} from "firebase/firestore"
 
 
 export const ItemListContainer = () => {
@@ -11,32 +11,27 @@ export const ItemListContainer = () => {
 
   const [products, setProducts] = useState([]);
 
-  const mostrarProds =()=>{
-    return new Promise((resolve, reject)=>{
-       Products.length <= 1 ? 
-       reject('No hay productos')
-       : setTimeout(() => {resolve(Products)},1) 
-    });
-  }
-
-  async function fetchData(){
-    try{
-      const data = await mostrarProds();
-      setProducts(data)
-    } catch (err){
-      console.log(err)
-    }
-  }
-  
   useEffect(()=>{
-    fetchData()
-  },[category])
-
+    const db = getFirestore();
+    const itemCollection = collection(db, 'Productos');
+    getDocs(itemCollection).then((prods)=>{
+      const docs = prods.docs.map((doc)=> {
+       return { ...doc.data(),id: doc.id}
+      });
+      setProducts(docs)
+    })
+  },[])
 
   const prodFilter = products.filter((p)=> p.category === category)
   return (
     <>
-      {category ? <ItemList data={prodFilter}/> : <ItemList data={products}/>}
+    <div className='flex flex-col justify-center items-center'>
+        <div className='text-xl text-slate-200 font-medium my-16'>
+            <span>Buenas! Bienvenido a GameStop ;)</span>
+        </div>
+        {category ? <ItemList data={prodFilter}/> : <ItemList data={products}/>}
+    </div>
+      
     </>
   )
 }
