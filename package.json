@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start":"npm run dev"
+    "start":"node src/main.jsx"
   },
   "dependencies": {
     "dom": "^0.0.3",
